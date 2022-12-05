@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Read me for IEQ interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Backend Setup
 
-## Available Scripts
+Backend part of this system is a python program that provides real-time data (json file) of Linklab to frontend interface every 5 minutes.
 
-In the project directory, you can run:
+Operating environment:
 
-### `npm start`
+1. OS: Windows10
+2. python 3.8.13
+3. go to ./backend/ and run following command
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```shell
+$ pip install -r requirements.txt
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. In order to run the backend program, you need to setup the env file in ./backend/, however, I will not provide this on github since it is key to Linklab IEQ server. If you are a student or faculty in this class, you should know where it is. So, download the env file and put it in ./backend/, then, run following command
 
-### `npm test`
+```shell
+$ mv env .env
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Now you can run ./backend/real_time_IEQ.py and this program will automatically generate Linklab data to frontend interface
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Frontend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After activating the backend part, we can setup the front end interface now.
 
-### `npm run eject`
+1. run following command at root (./) to install node.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```shell
+npm install -g npm
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Then, run following command to activate the interface on localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```shell
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+now, you can see the front-end interface, this interface will update automatically every 5 minutes if you have activated the backend program.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
