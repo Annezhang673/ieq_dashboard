@@ -42,3 +42,5 @@ npm start
 
 now, you can see the front-end interface, this interface will update automatically every 5 minutes if you have activated the backend program.
 
+## Group members
+Blake Wang, Xinyue Fan, Anne Zhang, Francis Becker
